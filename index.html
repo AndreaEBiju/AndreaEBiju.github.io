@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulabh.in | Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+      <a href="#" class="navbar-brand"><img src="sulabh_logo-final.png" alt="Sulabh logo" title="Sulabh_logo" style="width: 20vw; vertical-align: middle;"></a>
+      <ul>
+          <li><a href="#sect1" title="About">About</a></li>
+          <li><a href="#sect2" title="Contact us">Contact Us</a></li>
+          <li><a href="#sect3" title="Know More">Know More</a></li>
+      </ul>
+      <button class="navbar-toggler">
+          <span></span>
+      </button>
+  </nav>
+  <header class="intro">
+      <div class="container"><img src="sulabhlogo2.png" alt="Sulabh Logo" id="logo_main"></img></div>
+      <button type="button" title="Voice Based Assistance" id="feature1" aria-describedby="Voice Based Assistance"><!--<a href="#voice_based_assistance"></a>--></button>
+      <button type="button" class="feature" title="Gesture Based Navigation" id="feature2" aria-describedby="Gesture Based Navigation"><a href="gesture_based_navigation"></a></button>
+      <button type="button" class="feature" title="Captions and Hyperlinks" id="feature3" aria-describedby="Captions and Hyperlinks"><a href="captions_and_hyperlinks"></a></button>
+      <button type="button" class="feature" title="Text to Refreshable Braille Compatibility" id="feature4" aria-describedby="Text to Refreshable Braille Compatibility"><a href="text_to_braille"></a></button>
+      <button type="button" title="Ease of Access and Understanding" id="feature5" aria-describedby="Ease of Access and Understanding"><a href="ease_of_access"></a></button>
+      <button type="button" title="Appearance Settings" id="feature6" aria-describedby="Appearance Settings"><a href="appearance_settings"></a></button>
+      <div class="container" id="intro" class="reveal">
+        <h2>Introducing <span>Sulabh.in</span>, a website that revolutionises the Internet for the differently abled!</h2>
+        <h3>Select the Features you wish to use, enter the website you wish to visit, and hit Go!</h3>
+        <h3>To understand how to use this portal click on 'Tutorial' below</h3>
+        <button id="tutorial" class="tutorial" type="button" title="Tutorial">Tutorial</button>
+        <br>
+        <br>
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+            <input name="sitesearch" type="hidden">
+            <input autocomplete="on" class="form-control search" style="height: 5vh; width: 30vw;" name="q" placeholder="Search in example.com" required="required"  type="text">
+            <button class="button" type="submit">Search</button>
+        </form>
+    </div>
+      <div class="feature_list">
+      <div class="container" class="hidden" id="voice_based_assistance">voice based assistance</div>
+      <div class="container" class="hidden" id="gesture_based_navigation">gesture based navigation</div>
+      <div class="container" class="hidden" id="captions_and_hyperlinks">captions and Hyperlinks</div>
+      <div class="container" class="hidden" id="text_to_braille">text to refreshable braille compatibility</div>
+      <div class="container" class="hidden" id="ease_of_access">ease of access and Understanding</div>
+      <div class="container" class="hidden" id="appearance_settings">appearance Settings</div>
+    </div>
+  </header>   <!--background image only in Header-->
+  <section id="sect1" class="container"><h2>section 1</h2></section>
+  <section id="sect2" class="container"><h2>section 2</h2></section>
+  <section id="sect3" class="container"><h2>section 3</h2></section>
+
+    <script src="main.js"></script>
+</body>
+</html>
