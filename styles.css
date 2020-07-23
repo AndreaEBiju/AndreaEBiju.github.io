@@ -6,7 +6,7 @@
 body {
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
     background-color: white;
-    color: #333333;
+    color: #ffffff;
 }
 .navbar{
     background-color: black;
@@ -72,7 +72,7 @@ body {
     background-size: cover;
     /*background color: #000000;*/
 }
-.container{
+#sect1, #sect2, #sect3{
     position: relative;
     height: 100vh;
     color: #ffffff;
@@ -180,13 +180,14 @@ body {
         margin-left: 2.5%; 
         padding: 30vh 0;
         /*position: absolute;*/
-    }
-    
+        -ms-transform: translateY(-7vh); 
+        transform: translateY(-7vh); 
+    }   
     #feature1{
         position: absolute;
         top: 50%; 
-        -ms-transform: translateY(-4vh); 
-        transform: translateY(-4vh); 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
         width: 6%; 
         min-width: 30px;
         /*height: 15vh; */
@@ -206,8 +207,8 @@ body {
     #feature2{
         position: absolute; 
         top: 50%; 
-        -ms-transform: translateY(-4vh); 
-        transform: translateY(-4vh); 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
         width: 6%; 
         /*height: 80px; */
         border-radius: 50%; 
@@ -226,8 +227,8 @@ body {
     #feature3{
         position: absolute; 
         top: 50%; 
-        -ms-transform: translateY(-4vh); 
-        transform: translateY(-4vh); 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
         width: 6%; 
         /*height: 80px; */
         border-radius: 50%; 
@@ -246,8 +247,8 @@ body {
     #feature4{
         position: absolute; 
         top: 50%; 
-        -ms-transform: translateY(-4vh); 
-        transform: translateY(-4vh); 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
         width: 6%; 
         /*height: 80px; */
         border-radius: 50%; 
@@ -266,8 +267,8 @@ body {
     #feature5{
         position: absolute; 
         top: 50%; 
-        -ms-transform: translateY(-4vh); 
-        transform: translateY(-4vh); 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
         width: 6%; 
         /*height: 80px; */
         border-radius: 50%; 
@@ -286,8 +287,8 @@ body {
     #feature6{
         position: absolute; 
         top: 50%;
-        -ms-transform: translateY(-4vh); 
-        transform: translateY(-4vh); 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
         width: 6%; 
         /*height: 80px; */
         border-radius: 50%; 
@@ -304,12 +305,25 @@ body {
         display: block;
     }
     #intro{
-        float: right;
+        float: left;
         position: absolute;
         top: 50%;
         /*right: 50%;*/
-        transform: translate(0, -20%);
-        padding-left: 55vw;
+        transform: translate(0, 17%);
+        padding-left: 3vw;
+        margin-right: 45vw;
+    }
+    .feature_list{
+        float: right;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0,-50%);
+        margin-left: 15vw;
+        font-size: 4vh;
+    }
+    .feature_list .hidden{
+        display: none;
     }
 }
 @media(max-width:800px){
@@ -352,7 +366,6 @@ body {
         transform: translateY(-8vh); 
         width: 7%; 
         min-width: 30px;
-        /*height: 15vh; */
         border-radius: 50%; 
         margin-left: 24vw; 
         margin-right: auto;
@@ -396,7 +409,6 @@ body {
         transform: translateY(-8vh); 
         width: 7%; 
         min-width: 30px;
-        /*height: 15vh; */
         border-radius: 50%; 
         margin-left: 44vw; 
         margin-right: auto;
@@ -418,7 +430,6 @@ body {
         transform: translateY(-8vh); 
         width: 7%; 
         min-width: 30px;
-        /*height: 15vh; */
         border-radius: 50%; 
         margin-left: 54vw; 
         margin-right: auto;
@@ -440,7 +451,6 @@ body {
         transform: translateY(-8vh); 
         width: 7%; 
         min-width: 30px;
-        /*height: 15vh; */
         border-radius: 50%; 
         margin-left: 64.5vw; 
         margin-right: auto;
@@ -455,22 +465,14 @@ body {
         padding-bottom: 100%;
         display: block;
     }
-    .container .reveal{
-        display: block;
-    }
     #intro{
         position: absolute;
-        /*top: 50%;*/
-        /*right: 50%;*/
         transform: translate(0, -45%);
         margin-right: 10%;
         margin-left: 10%;
         text-align: justify;
         letter-spacing: 1px;
     }
-}
-.container .hidden{
-    display: none;
 }
 #intro h2{
     text-transform: uppercase;
@@ -485,11 +487,11 @@ body {
 	text-transform: uppercase;
     letter-spacing: 2px;
     width: fit-content;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
     height: fit-content;
-    padding-bottom: 1.5vw;
-    padding-top: 1.5vw;
+    padding-bottom: 0.5vw;
+    padding-top: 0.5vw;
     border-radius: 10%;
     font-size: 1.5vw;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
@@ -501,6 +503,11 @@ body {
 }
 @media (min-width:200px){
     #intro{
-        font-size: 1.25vw;
+        font-size: 1.05vw;
     }
+}
+.searchform .button{
+    height: 5.5vh;
+    width: fit-content;
+    font-size: 2.5vh;
 }
