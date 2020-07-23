@@ -2,7 +2,7 @@
 var input = document.getElementsByTagName("input");
 // When the user presses any key on the keyboard, run the function
 for(let i=0; i<input.length; i++){
-input[i].addEventListener("keyup", function(event) {
+if(input[i].addEventListener){ input[i].addEventListener("keyup", function(event) {
   // If "caps lock" is pressed, display the warning text
   if (event.getModifierState("CapsLock")) {
     var text = document.createElement("P");   // Create a <button> element
@@ -12,23 +12,12 @@ input[i].addEventListener("keyup", function(event) {
     alert("Warning!Caps Lock is off!");
   }
 });
-//fallback for other browsers
-input[i].attachEvent("keyup", function(event) {
-  // If "caps lock" is pressed, display the warning text
-  if (event.getModifierState("CapsLock")) {
-    var text= "<p>WARNING!Caps lock is Off!</p>";
-    input[i].insertAdjacentHTML("afterend",text);
-    
-    alert("Warning!Caps Lock is off!");
-  }
-});
 }
 
 //warning for not loading video
 var video = document.getElementsByTagName("video");
 for(let i=0;i<video.length;i++){
     video[i].addEventListener("abort",abortFunction(event));
-    video[i].attachEvent("abort",abortFunction(event));
     video[i].oncanplay = function() {
       alert("Can start playing video");
   };
@@ -62,7 +51,6 @@ function abortFunction(event){
 var audio = document.getElementsByTagName("audio");
 for(let i=0;i<audio.length;i++){
     audio[i].addEventListener("abort",abortFunctionAudio(event));
-    audio[i].attachEvent("abort",abortFunctionAudio(event)); //fallback for IE
     audio[i].oncanplay = function() {
       alert("Can start playing audio");
   };
