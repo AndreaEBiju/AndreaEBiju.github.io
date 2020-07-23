@@ -66,19 +66,10 @@ function easeInOutCubic(t, b, c, d) {
 	return c/2*(t*t*t + 2) + b;
 };
 
-/*const features = document.querySelectorAll(".feature a");
-const featureList = document.querySelectorAll (".feature_list div");
-const intro = document.querySelector("#intro")
-
-for(let j=0; j<features.length; j++) {
-  features[j].addEventListener("click", featureClick(j));
+const features = document.querySelectorAll(".feature");
+const options = document.querySelectorAll(".options");
+for(let i=0; i<features.length;i++){
+  features[i].addEventListener("click", function(){
+  options[i].classList.toggle = "hidden";
+});
 }
-function featureClick(j){
-  for(let k=0; k<featureList.length; k++){
-    if(k==j){
-      featureList[k].classList.toggle(.reveal);
-      featureList[k].classList.toggle(.hidden);
-    }
-  }
-  //intro.classList.toggle("hidden");
-}*/
