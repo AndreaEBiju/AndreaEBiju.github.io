@@ -313,7 +313,7 @@ body {
         margin-right: 5%;
     }
 }
-@media(max-width:800px){
+@media(max-width:800px)and(min-width:750px){
     #logo_main{
         display: block; 
         margin-right: auto; 
@@ -533,6 +533,232 @@ body {
         bottom: 50%;
         transform: translateY(270%);
         font-size: 2.75vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (min-width:750px){
+
+    #logo_main{
+        display: block; 
+        margin-right: auto; 
+        width: 75%; 
+        /*min-width: 300px;*/
+        margin-left: auto; 
+        padding: 30vh 0;
+        transform: translateY(-20%);
+
+        /*position: absolute;*/
+    }
+
+    #feature1{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-20vh); 
+        transform: translateY(-20vh); 
+        width: 8%; 
+        min-width: 30px;
+        /*height: 15vh; */
+        border-radius: 50%; 
+        margin-left: 14vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(speaker.jpg);
+        background-size: cover;
+    }
+    #feature1:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature2{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-20vh); 
+        transform: translateY(-20vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 24vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(iris_control.jpg);
+        background-size: cover;
+    }
+    #feature2:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature3{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-20vh); 
+        transform: translateY(-20vh); 
+        width: 8%; 
+        min-width: 30px;
+        /*height: 15vh; */
+        border-radius: 50%; 
+        margin-left: 34vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(captions_icon.jpg);
+        background-size: cover;
+    }
+    #feature3:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature4{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-20vh); 
+        transform: translateY(-20vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 44vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(braille-image.jpg);
+        background-size: cover;
+    }
+    #feature4:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature5{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-20vh); 
+        transform: translateY(-20vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 54vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(easyaccess.jpg);
+        background-size: cover;
+    }
+    #feature5:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature6{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-20vh); 
+        transform: translateY(-20vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 64.5vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(settings.jpg);
+        background-size: cover;
+    }
+    #feature6:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #intro{
+        position: absolute;
+        transform: translate(0, -85%);
+        margin-right: 5%;
+        margin-left: 5%;
+        text-align: justify;
+        letter-spacing: 1px;
+        top: 50%;
+        text-transform: uppercase;
+        font-size: 3vh;
+        color: #000000;
+    }
+    #tut{
+        position: absolute;
+        transform: translate(0, -35%);
+        margin-right: 5%;
+        margin-left: 5%;
+        font-size: 2.5vh;
+    }
+    .searchform{
+        transform: translate(0, 250%);
+        margin-left: 50%;
+    }
+    .searchform .button{
+        height: 5vh;
+        width: fit-content;
+        font-size: 2vh;
+    }
+    #tutorial{
+        transform: translateY(55%);
+        margin-left: 4.5%;
+        font-size: 2.5vw;
+        height: fit-content;
+    }
+    #intro_h3{
+        transform: translateY(10%);
+        font-size: 2.5vh;
+        position: absolute;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: #000000;
+        top: 50%;
+    }
+    .container.options{
+        transform: translateY(50%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #appearance_settings{
+        transform: translateY(46%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #gesture_based_navigation{
+        transform: translateY(85%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #text_to_braille{
+        transform: translateY(65%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #sect1 h2{
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(270%);
+        font-size: 2.5vh;
         margin-left: 5%;
         margin-right: 5%;
     }
