@@ -281,5 +281,740 @@ $('body').on('click', '.leftArrow', function() {
 </script>
 
     <script src="main.js"></script>
+    <noscript>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulabh.in | Welcome</title>
+  
+<style>
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+    background-color: white;
+    color: #ffffff;
+}
+.navbar{
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar a.navbar-brand {
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.navbar a.navbar-brand span {
+    font-size: 28px;
+    font-weight: 700;
+}
+.navbar ul {
+    float: right;
+    list-style: none;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 50px;
+}
+.navbar ul li {
+    display: inline-block;
+}
+.navbar ul li a {
+    display: block;
+    text-align: center;
+    min-width: 120px;
+    padding: 0 30px;
+}
+.navbar ul li a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+.navbar .navbar-toggler {
+    display: none;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    /*background color: #000000;*/
+}
+#sect1, #sect2, #sect3{
+    position: relative;
+    height: 100vh;
+    color: #ffffff;
+}
+#sect2 h2, #sect3 h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vh;
+}
+#sect1 {
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#sect2{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#sect3{
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@media (max-width: 991px){
+    .navbar ul{
+        padding: 0 10px;
+    }
+    .navbar ul li a{
+        min-width: 100px;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 767px){
+    .navbar{
+        padding: 0;
+    }
+    .navbar ul{
+        width: 100%;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 100vh;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+    }
+    .navbar ul.open{ /*toggled class name is open*/
+        max-height: 100vh;
+    }
+    .navbar ul li{
+        width: 100%;
+    }
+    .navbar ul li a{
+        padding: 0;
+    }
+    .navbar .navbar-toggler{
+        display: block;
+        position: absolute;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+    /*for making hamburger menu*/
+    .navbar .navbar-toggler span, .navbar .navbar-toggler span::before, .navbar .navbar-toggler span::after{
+        display: block;
+        content: '';
+        background-color: #ffffff;
+        height: 3px;
+        width: 28px;
+        border-radius: 4px;
+        transition: all ease-in-out 0.3s;
+    }
+    .navbar .navbar-toggler span::before{
+        transform: translateY(-8px);
+    }
+    .navbar .navbar-toggler span::after{
+        transform: translateY(5px);
+    }
+    /*for close button*/
+    .navbar .navbar-toggler .open-navbar-toggler span{ /*toggled class name is open navbar toggler*/
+        background-color: transparent; /*only one bar of menu needed*/
+        transform: scale(0.85) rotate(270deg);
+    }
+    .navbar .navbar-toggler .open-navbar-toggler span::before{
+        transform: translateY(0px) scale(0.75) rotate(45deg);
+    }
+    .navbar .navbar-toggler .open-navbar-toggler span::after{
+        transform: translateY(-3px) scale(0.75) rotate(-45deg); /*brings this bar of menu to same level*/
+    }
+}
+@media(min-width:800px){
+    #logo_main{
+        display: block; 
+        margin-right: auto; 
+        width: 50%; 
+        min-width: 300px;
+        margin-left: 2.5%; 
+        padding: 30vh 0;
+        /*position: absolute;*/
+        -ms-transform: translateY(-7vh); 
+        transform: translateY(-7vh); 
+    }   
+    #feature1{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
+        width: 6%; 
+        min-width: 30px;
+        /*height: 15vh; */
+        border-radius: 50%; 
+        margin-left: 3vw; 
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(speaker.jpg);
+        background-size: cover;
+    }
+    #feature1:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature2{
+        position: absolute; 
+        top: 50%; 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
+        width: 6%; 
+        /*height: 80px; */
+        border-radius: 50%; 
+        margin-left: 10vw; 
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(iris_control.jpg);
+        background-size: cover;
+    }
+    #feature2:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature3{
+        position: absolute; 
+        top: 50%; 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
+        width: 6%; 
+        /*height: 80px; */
+        border-radius: 50%; 
+        margin-left: 17vw; 
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(captions_icon.jpg);
+        background-size: cover;
+    }
+    #feature3:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature4{
+        position: absolute; 
+        top: 50%; 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
+        width: 6%; 
+        /*height: 80px; */
+        border-radius: 50%; 
+        margin-left: 24vw; 
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(braille-image.jpg);
+        background-size: cover;
+    }
+    #feature4:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature5{
+        position: absolute; 
+        top: 50%; 
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
+        width: 6%; 
+        /*height: 80px; */
+        border-radius: 50%; 
+        margin-left: 31vw; 
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(easyaccess.jpg);
+        background-size: cover;
+    }
+    #feature5:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature6{
+        position: absolute; 
+        top: 50%;
+        -ms-transform: translateY(-11vh); 
+        transform: translateY(-11vh); 
+        width: 6%; 
+        /*height: 80px; */
+        border-radius: 50%; 
+        margin-left: 38vw; 
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(settings.jpg);
+        background-size: cover;
+    }
+    #feature6:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #sect1 h2{
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(340%);
+        font-size: 3vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media(max-width:800px){
+    #logo_main{
+        display: block; 
+        margin-right: auto; 
+        width: 75%; 
+        /*min-width: 300px;*/
+        margin-left: auto; 
+        padding: 30vh 0;
+        transform: translateY(-20%);
+        /*position: absolute;*/
+    }
+    
+    #feature1{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-23vh); 
+        transform: translateY(-23vh); 
+        width: 8%; 
+        min-width: 30px;
+        /*height: 15vh; */
+        border-radius: 50%; 
+        margin-left: 14vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(speaker.jpg);
+        background-size: cover;
+    }
+    #feature1:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature2{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-23vh); 
+        transform: translateY(-23vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 24vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(iris_control.jpg);
+        background-size: cover;
+    }
+    #feature2:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature3{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-23vh); 
+        transform: translateY(-23vh); 
+        width: 8%; 
+        min-width: 30px;
+        /*height: 15vh; */
+        border-radius: 50%; 
+        margin-left: 34vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(captions_icon.jpg);
+        background-size: cover;
+    }
+    #feature3:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature4{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-23vh); 
+        transform: translateY(-23vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 44vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(braille-image.jpg);
+        background-size: cover;
+    }
+    #feature4:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature5{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-23vh); 
+        transform: translateY(-23vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 54vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(easyaccess.jpg);
+        background-size: cover;
+    }
+    #feature5:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #feature6{
+        position: absolute;
+        top: 50%; 
+        -ms-transform: translateY(-23vh); 
+        transform: translateY(-23vh); 
+        width: 8%; 
+        min-width: 30px;
+        border-radius: 50%; 
+        margin-left: 64.5vw; 
+        margin-right: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+        vertical-align: middle;
+        border: none;
+        background-image: url(settings.jpg);
+        background-size: cover;
+    }
+    #feature6:after{
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+    #intro{
+        position: absolute;
+        transform: translate(0, -100%);
+        margin-right: 5%;
+        margin-left: 5%;
+        text-align: justify;
+        letter-spacing: 1px;
+        top: 50%;
+        text-transform: uppercase;
+        font-size: 3vh;
+        color: #000000;
+    }
+    
+    .searchform{
+        transform: translate(0, 300%);
+        margin-left: 50%;
+    }
+    .searchform .button{
+        height: 5vh;
+        width: fit-content;
+        font-size: 2vh;
+    }
+   
+    #intro_h3{
+        transform: translateY(0%);
+        font-size: 2.5vh;
+        position: absolute;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: #000000;
+        top: 50%;
+    }
+    .container.options{
+        transform: translateY(50%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #appearance_settings{
+        transform: translateY(31%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #gesture_based_navigation{
+        transform: translateY(65%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #text_to_braille{
+        transform: translateY(55%);
+        position: absolute;
+        top: 50%;
+        font-size: 2.5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #sect1 h2{
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(270%);
+        font-size: 2.75vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media(min-width:945px){
+    
+    #intro{
+        float: right;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(0, -125%);
+        text-transform: uppercase;
+        font-size: 3.5vh;
+        margin-left: 5vw;
+        color: #000000;
+    }
+    .searchform{
+        transform: translate(0, -350%);
+        margin-left: 3.5%;
+    }
+   
+    #intro_h3{
+        transform: translateY(-60%);
+        font-size: 3vh;
+        float: right;
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        margin-left: 5vw;
+        color: #000000;
+    }
+    .container.options{
+        transform: translateY(25%);
+        float: right;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        font-size: 3.5vh;
+        margin-left: 5vw;
+    }
+    .searchform .button{
+        height: 5.5vh;
+        width: fit-content;
+        font-size: 2.5vh;
+    }
+}
+@media(min-width:800px)and (max-width:945px){
+   
+    #intro{
+        float: right;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0, -125%);
+        text-transform: uppercase;
+        font-size: 3.5vh;
+        margin-left: 5vw;
+        color: #000000;
+    }
+    .searchform{
+        transform: translate(0, -350%);
+        margin-left: 3.5%;
+    }
+   
+    #intro_h3{
+        transform: translateY(-40%);
+        font-size: 3vh;
+        float: right;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: 5vw;
+        color: #000000;
+    }
+    .container.options{
+        transform: translateY(50%);
+        float: right;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3vh;
+        margin-left: 5vw;
+    }
+    .searchform .button{
+        height: 5.5vh;
+        width: fit-content;
+        font-size: 2.5vh;
+    }
+}
+
+</style>
+
+</head>
+<body>
+  <nav class="navbar">
+      <a href="#" class="navbar-brand" title="Home-Sulabh.in (shortcut: h)" tabindex="1" accesskey="h"><img src="sulabh_logo-final.png" alt="Sulabh logo" title="Sulabh_logo" style="width: 20vw; vertical-align: middle;"></a>
+      <ul>
+          <li><a href="#sect1" title="About" tabindex="3">About</a></li>
+          <li><a href="#sect2" title="Know More (shortcut: k)" tabindex="4" accesskey="k">Know More</a></li>
+          <li><a href="#sect3" title="Contact us" tabindex="5">Contact Us</a></li>
+      </ul>
+      <button class="navbar-toggler" title="menu (shortcut: m)" tabindex="2">
+          <span></span>
+      </button>
+  </nav>
+  <header class="intro">
+      <div class="container"> <img src="sulabhlogo2.png" alt="Sulabh Logo" id= "logo_main"> </img> </div>
+      <button type="button"   tabindex="6" action="" class="feature" title="Voice Based Assistance (shortcut:v)" id="feature1" ></button>
+      <button type="button"   tabindex="10" class="feature" title="Gesture Based Navigation (shortcut:g)" id="feature2" ></button>
+      <button type="button"   tabindex="13" class="feature" title="Captions and Hyperlinks (shortcut:c)" id="feature3" ></button>
+      <button type="button"   tabindex="17" class="feature" title="Text to Refreshable Braille Compatibility (shortcut:b)" id="feature4" ></button>
+      <button type="button"   tabindex="20" class="feature" title="Ease of Access and Understanding (shortcut:u)" id="feature5" ></button>
+      <button type="button"   tabindex="24" class="feature" title="Appearance Settings (shortcut:a)" id="feature6" ></button>
+
+
+
+      <div class="container">
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" title="Search (shortcut:s)" target="_blank">
+            <input name="sitesearch" type="hidden">
+            <input tabindex="30"  autocomplete="on" class="form-control search" style="height: 5vh; width: 35vw;" name="q" placeholder="Search in google.com" required="required"  type="text">
+            <button class="button" type="submit" tabindex="31">Search</button>
+        </form>
+      </div>
+         <div style="font-size:6.1vh; color:black; text-align:center;" >
+PLEASE ENABLE JAVASCRIPT IN YOUR BROWSER TO ACCESS ALL FEATURES
+        </div>
+  
+    <div class="feature_list">
+        <h2 id="intro">Introducing <span style="color: #ffffff;">Sulabh.in</span>, a website that revolutionises Internet for the differently abled!</h2>
+        <h3 id="intro_h3">Select the Features you wish to use, enter the website you wish to visit, and hit Go!</h3>
+        <div class="container options" id="voice_based_assistance">
+            
+                <p>VOICE BASED ASSISTANCE</p>
+	<p>GESTURE BASED NAVIGATION </P>
+        <p>IMAGE AND VIDEO CAPTIONING </p>
+        <p> TEXT TO BRAILLE COMPATIBILITY </p>
+<p> SPELLING AND MEANING ASSISTANCE </p>
+<p> KEYBOARD SHORTCUTS </p>
+<p> APPEARANCE SETTINGS FOR EASY VIEW </p>
+                
+              
+        </div>
+        <div class="container options" style="display: none;" id="gesture_based_navigation">
+            <form action="" method="get">
+                <p>GESTURE BASED NAVIGATION</p>
+                <input type="checkbox" tabindex="11" name="Gesture Tracking" value="Gesture Tracking">
+                <label for="Gesture Tracking"> Gesture Tracking</label><br>
+                <input type="submit" tabindex="12" value="Submit">
+              </form>
+        </div>
+        <div class="container options" style="display: none;" id="captions_and_hyperlinks">
+            <p>CAPTIONS AND HYPERLINKS</p>
+            <input type="checkbox" tabindex="14" name="Image Video Captioning" value="Image Video Captioning">
+            <label for="Image Video Captioning"> Image and Video Captioning</label><br>
+            <input type="checkbox" tabindex="15" name="Error and Success Messages" value="Error and Success Messages">
+            <label for="Error and Success Messages"> Error and Success Messages</label><br>
+            <input type="submit" tabindex="16" value="Submit">
+        </div>
+        
+        
+        <div class="container options" style="display: none;" id="appearance_settings">
+            <p>APPEARANCE SETTINGS</p>
+            <input type="checkbox" tabindex="25" name="Font and Font Size Adjustment" value="Font and Font Size Adjustment">
+            <label for="Font and Font Size Adjustment"> Font and Font Size Adjustment</label><br>
+            <input type="checkbox" tabindex="26" name="Text Spacing" value="Text Spacing">
+            <label for="Text Spacing"> Text Spacing</label><br>
+            <input type="checkbox" tabindex="27" name="Change Color Schemes" value="Change Color Schemes">
+            <label for="Change Color Schemes"> Change Color Schemes</label><br>
+            <input type="checkbox" tabindex="28" name="Button and Form Highlighting and Enlargement" value="Button and Form Highlighting and Enlargement">
+            <label for="Button and Form Highlighting and Enlargement"> Button and Form Highlighting and Enlargement</label><br>
+            <input type="submit" tabindex="29" value="Submit">
+        </div>
+      </div>
+  </header>   <!--background image only in Header-->
+  <section id="sect1" tabindex="33" class="container">
+      <h2 style="color: #000000;">Sulabh.in is a website that provides a range of accessibility features for various categories of differently abled people, that enables users to use all websites with ease!
+      </h2>
+  </section>
+  <section id="sect2" tabindex="34" class="container"><h2>Detailed description of features</h2></section>
+  <section id="sect3" tabindex="35" class="container">
+      <h2 style="font-size: 4vh;"><span style="color: #000000;" role="doc-credits">Contact Us at:</span>
+          <br>
+        Team Blink, 
+        <br>
+        Nirmaan (Pre-Incubation Cell), 
+        <br>
+        Indian Institute of Technology Madras, 
+        <br>
+        Chennai-600036, India
+        <br>
+        Email id: blink.iitmadras@gmail.com
+      </h2>
+  </section>
+
+
+</body>
+</html>
+
+    </noscript>
 </body>
 </html>
