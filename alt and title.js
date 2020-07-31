@@ -6,17 +6,17 @@ for (let i=0; i<anchor.length; i++){
         anchor[i].title = hrefAnchor;
     }
 }
-//code to set all address italics to normal for dyslexic
-var address = document.getElementsByTagName("address");
-for(let i=0; i<address.length; i++){
-    address[i].style.fontStyle = "normal";
-    if(address[i].title==""){
-        address[i].title = "address";
+//code to add alt text for an image
+var image = document.getElementsByTagName("img");
+for(let i=0;i<image.length;i++){
+    var imgsrc = image[i].src;
+    if(image[i].alt==""){
+        image[i].alt = imgsrc;
+    }
+    if(image[i].title==""){
+       image[i].title = image[i].alt;
     }
 }
-//code to set all body text from italics to normal and sans serif fonts for dyslexic
-document.body.style.fontStyle = "normal";
-document.body.style.fontFamily = "sans serif";
 //code to add alt text to an image map area
 var area = document.getElementsByTagName("area");
 for (let i=0;i<area.length;i++){
@@ -24,9 +24,4 @@ for (let i=0;i<area.length;i++){
     if(area[i].alt==""){
         area[i].alt=hrefArea;
     }
-}
-//code to enable read aloud line breaks
-var br = document.getElementsByTagName("br");
-for(let i=0; i<br.length; i++){
-    br[i].title = "Line Break";
 }
