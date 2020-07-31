@@ -6,6 +6,18 @@ navbarToggler.addEventListener("click", navbarTogglerClick);
 
 function navbarTogglerClick() {
   navbarToggler.classList.toggle("open-navbar-toggler");
+  /* x = navbarToggler.classList.contains("open-navbar-toggler");
+  if(x==false){
+    var tabindexes;
+    for(let i=0;i<navbarLinks.length;i++){
+      tabindexes[i]= navbarLinks[i].tabIndex;
+      navbarLinks[i].tabIndex = -1;
+    }
+  }else if(navbarLinks[0].tabIndex==-1){
+    for(let i=0;i<navbarLinks.length;i++){
+      navbarLinks[i].tabIndex = tabindexes[i];
+    }
+  }*/
   navbarMenu.classList.toggle("open");
 }
 
