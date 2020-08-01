@@ -1,4 +1,5 @@
 //for clearing forms input
+var inputs = document.getElementsByTagName("input");
 for(let i=0; i<inputs.length;i++){
     var clearButton = document.createElement("button");
     clearButton.onclick = function(){inputs[i].value = '';};
