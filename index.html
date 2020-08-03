@@ -6,7 +6,7 @@
     <title>Sulabh.in | Welcome</title>
     <link rel="stylesheet" href="styles.css">
 <style>
-#overlay {
+.overlay {
   position: fixed;
   display: none;
   width: 100%;
@@ -15,7 +15,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   z-index: 3;
   cursor: pointer;
 }
@@ -84,30 +84,50 @@
       <button type="button" onclick="display5()" accesskey="u" tabindex="20" class="feature" title="Ease of Access and Understanding (shortcut:u)" id="feature5" ></button>
       <button type="button" onclick="display6()" accesskey="a" tabindex="24" class="feature" title="Appearance Settings (shortcut:a)" id="feature6" ></button>
 
-<div id="overlay">
+<div class="overlay" id="overlayFirst">
   <div class="rightArrow"> &#8250; </div>
   <div class="leftArrow"> &#8249; </div>
 
   <div class="popupTut">
-     <div class="tut-content" id="tut1" data-id='1' style="display:block;">Let's get started! Navigate through this short tutorial for selection of desired features using the left and right arrow keys </div>
-     <div class="tut-content" id="tut2" data-id='2'>Click on these buttons to view the list of features
+     <div class="tut-content" id="tutE1" data-id='1' style="display:block;">Let's get started! Navigate through this short tutorial for selection of desired features using the left and right arrow keys </div>
+     <div class="tut-content" id="tutE2" data-id='2'>Click on these buttons to view the list of features
 <p> <img src="Click_Button.png" alt="Buttons under Sulabh.in" width=100%; > </p> </div>
-     <div class="tut-content" id="tut3" data-id='3'>Select the features under each catergory you want by clicking on the checkboxes <br>
+     <div class="tut-content" id="tutE3" data-id='3'>Select the features under each catergory you want by clicking on the checkboxes <br>
 <p> <img src="Select_Features.jpg" alt="Select Features" width=90%; </p> </div>
-     <div class="tut-content" id="tut4" data-id='4'>Hit the SUBMIT button to enable these features <br>
+     <div class="tut-content" id="tutE4" data-id='4'>Hit the SUBMIT button to enable these features <br>
 <p> <img src="Click_Submit.jpg" alt="Click Submit" width=90%; </p> </div>
-     <div class="tut-content" id="tut5" data-id='5'>Type in your text in the search bar to start browsing <br>
+     <div class="tut-content" id="tutE5" data-id='5'>Type in your text in the search bar to start browsing <br>
 <p> <img src="Search_Here.png" alt="Search bar" width=70%;> </p> </div>
 
 
-     <div class="tut-content" id="tut6" data-id='6'>You are all set! Happy Browsing!</div>
-     
- 
+     <div class="tut-content" id="tutE6" data-id='6' style="text-align:center">You are all set! Happy Browsing!
+<div style="text-align:center"> <button onclick="off()">Close Tutorial</button> </div>
+  </div> </div>
+</div>
+
+<div class="overlay" id="overlayH">
+  <div class="rightArrow"> &#8250; </div>
+  <div class="leftArrow"> &#8249; </div>
+
+<div class="popupTut">
+     <div class="tut-content" id="tutH1" data-id='7' style="display:block;">आएँ शुरू करें! बाएँ और दाएँ तीर कुंजियों का उपयोग करके वांछित सुविधाओं के चयन के लिए इस संक्षिप्त ट्यूटोरियल के माध्यम से नेविगेट करें </div>
+     <div class="tut-content" id="tutH2" data-id='8'>सुविधाओं की सूची देखने के लिए इन बटन पर क्लिक करें
+<p> <img src="Click_Button.png" alt="Buttons under Sulabh.in" width=100%; > </p> </div>
+     <div class="tut-content" id="tutH3" data-id='9'>चेकबॉक्स पर क्लिक करके इच्छित प्रत्येक कैटरगरी के तहत सुविधाओं का चयन करें<br>
+<p> <img src="Select_Features.jpg" alt="Select Features" width=90%; </p> </div>
+     <div class="tut-content" id="tutH4" data-id='10'>इन सुविधाओं को सक्षम करने के लिए SUBMIT बटन को हिट करें <br>
+<p> <img src="Click_Submit.jpg" alt="Click Submit" width=90%; </p> </div>
+     <div class="tut-content" id="tutH5" data-id='11'>ब्राउज़िंग शुरू करने के लिए खोज पट्टी में अपने पाठ में टाइप करें<br>
+<p> <img src="Search_Here.png" alt="Search bar" width=70%;> </p> </div>
+
+
+     <div class="tut-content" id="tutH6" data-id='12' > आप पूरी तरह तैयार हैं! आपका समय शुभ हो!
+     <div style="text-align:center"> <button onclick="off()">Close Tutorial</button> </div>
+  </div> </div>
   
-				  <button onclick="off()">Close Tutorial</button>
-  </div>
   
 </div>
+
 
       <div class="container">
         <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" title="Search (shortcut:s)" target="_blank">
@@ -235,13 +255,28 @@
 
 <script> 
 function on() {
-  document.getElementById("overlay").style.display = "block";
+  document.getElementById("overlayFirst").style.display = "block";
 }
 
+	function onE() {
+  
+  
+  document.getElementById("overlayE").style.display = "block";
+}
+
+function onH() {
+ 
+  document.getElementById("overlayH").style.display = "block";
+}
+	
 function off() {
-  document.getElementById("overlay").style.display = "none";
+  document.getElementById("overlayH").style.display = "none";
+document.getElementById("overlayE").style.display = "none";
 }
 
+	function offFinal() {
+document.getElementById("overlayFirst").style.display = "none";
+}
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -273,7 +308,7 @@ $('body').on('click', '.leftArrow', function() {
   $('[data-id="' + id + '"]').hide();
   $('[data-id="' + prevId + '"]').show();
 
-  if (prevId == 1) {
+  if (prevId == 1 || prevId==7) {
     $('.leftArrow').hide();
   }
 });
